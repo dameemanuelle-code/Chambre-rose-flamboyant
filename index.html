@@ -2,593 +2,491 @@
 <html lang="fr">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Féminité Évolutive — Féminisation Luxe & Rosé Gold</title>
+  <title>Chambre Rose Flamboyant – Féminité Évolutive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
-    /* ---------- PALETTE FLAMBOYANTE ROSÉ GOLD ---------- */
-    :root{
-      --bg-deep:#120810;
-      --bg-soft:#fff6fb;
-      --rose-soft:#fdd6ea;
-      --rose:#f4a6c8;
-      --rose-deep:#b34b79;
-      --gold:#f4cf7a;
-      --gold-deep:#c79a43;
-      --text-dark:#3b2431;
-      --text-soft:#7f6473;
-      --card:#ffffff;
-      --shadow:0 18px 45px rgba(0,0,0,.45);
-      --radius:22px;
-      --max:1120px;
+    :root {
+      --fond: #120611;
+      --rose-soft: #fdd6ea;
+      --rose: #f4a6c8;
+      --rose-deep: #b34b79;
+      --gold: #f4cf7a;
+      --text: #fef5fb;
+      --text-soft: #e1c5d8;
+      --section-bg: #1b0a16;
+      --max: 960px;
     }
 
-    *{box-sizing:border-box;margin:0;padding:0}
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
-    body{
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      background:
-        radial-gradient(circle at top,#3f1c2b 0,#120810 50%,#080308 100%);
-      color:#fef5fb;
-      line-height:1.6;
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at top, #2e1226, var(--fond) 55%);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    h1,h2,h3{
-      font-family:"Georgia","Times New Roman",serif;
-      margin:0 0 10px;
+    a { color: inherit; text-decoration: none; }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: linear-gradient(to right, #240918, #2e1226);
+      border-bottom: 1px solid rgba(244, 207, 122, .35);
     }
 
-    a{text-decoration:none;}
-
-    .wrapper{
-      max-width:var(--max);
-      margin:0 auto;
-      padding:0 18px;
+    .nav-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
 
-    /* ---------- HERO / BANNIÈRE LUXE ---------- */
-    .hero{
-      padding:80px 18px 50px;
+    .logo {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 1.1rem;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--rose-soft);
     }
 
-    .hero-inner{
-      max-width:var(--max);
-      margin:0 auto;
-      display:grid;
-      gap:32px;
+    nav ul {
+      display: flex;
+      gap: 12px;
+      list-style: none;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
-    @media(min-width:860px){
-      .hero-inner{
-        grid-template-columns:1.2fr .9fr;
-        align-items:center;
+    nav a {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      color: var(--text-soft);
+    }
+
+    nav a:hover {
+      border-color: rgba(244, 207, 122, .6);
+      color: var(--gold);
+      background: rgba(12, 3, 6, .7);
+    }
+
+    /* STRUCTURE GÉNÉRALE */
+
+    main {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 32px 16px 40px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      padding: 24px 20px;
+      background: var(--section-bg);
+      border-radius: 18px;
+      border: 1px solid rgba(244, 207, 122, .28);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .55);
+    }
+
+    section.hero {
+      text-align: center;
+      background: radial-gradient(circle at top, #fdd6ea22, #1b0a16);
+    }
+
+    .hero-kicker {
+      font-size: .78rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--rose-soft);
+    }
+
+    .hero-title {
+      margin-top: 10px;
+      font-size: 2.2rem;
+      line-height: 1.25;
+      font-family: "Georgia", "Times New Roman", serif;
+      background: linear-gradient(120deg, #fdd6ea, #f4a6c8, #f4cf7a);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-sub {
+      margin-top: 12px;
+      color: var(--text-soft);
+      max-width: 640px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-tags {
+      margin-top: 16px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      font-size: .78rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(244, 207, 122, .38);
+      background: rgba(10, 2, 8, .9);
+      color: var(--rose-soft);
+    }
+
+    .hero-actions {
+      margin-top: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 9px 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: .9rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f4a6c8, #fbd3e4, #f4cf7a);
+      color: #3b2431;
+      font-weight: 600;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .7);
+    }
+
+    .btn-outline {
+      border-color: rgba(244, 207, 122, .7);
+      color: var(--gold);
+      background: transparent;
+    }
+
+    /* TITRES SECTIONS */
+
+    h2 {
+      font-family: "Georgia", "Times New Roman", serif;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+      color: var(--rose-soft);
+    }
+
+    .section-intro {
+      color: var(--text-soft);
+      margin-bottom: 10px;
+    }
+
+    /* LISTES & BLOCS */
+
+    p {
+      margin-bottom: 10px;
+      color: var(--text-soft);
+    }
+
+    ul {
+      margin: 6px 0 8px 18px;
+      color: var(--text-soft);
+    }
+
+    li { margin-bottom: 4px; }
+
+    .subheading {
+      margin-top: 10px;
+      font-weight: 600;
+      color: var(--rose);
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      font-size: .8rem;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(31, 9, 22, .9);
+      border: 1px solid rgba(244, 207, 122, .25);
+      color: var(--rose-soft);
+    }
+
+    /* CONTACT */
+
+    .contact-grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 720px) {
+      .contact-grid {
+        grid-template-columns: 1.2fr 1fr;
       }
     }
 
-    .hero-badge{
-      font-size:.8rem;
-      text-transform:uppercase;
-      letter-spacing:.18em;
-      color:#fbd3e4;
+    .contact-box {
+      background: #120611;
+      border-radius: 14px;
+      padding: 14px;
+      border: 1px solid rgba(244, 207, 122, .3);
     }
 
-    .hero-title{
-      margin-top:8px;
-      font-size:2.4rem;
-      line-height:1.25;
-      background:linear-gradient(120deg,#ffe3f3,#fbd3e4,#f4a6c8,#f4cf7a);
-      -webkit-background-clip:text;
-      color:transparent;
+    label {
+      display: block;
+      font-size: .85rem;
+      margin-bottom: 4px;
+      color: var(--rose-soft);
     }
 
-    .hero-title span{
-      font-style:italic;
+    input, textarea {
+      width: 100%;
+      padding: 7px 9px;
+      border-radius: 8px;
+      border: 1px solid #3b1a2b;
+      background: #1b0a16;
+      color: var(--text);
+      font-size: .9rem;
+      margin-bottom: 10px;
     }
 
-    .hero-text{
-      margin-top:10px;
-      color:#e9cfe0;
-      max-width:520px;
+    input:focus, textarea:focus {
+      outline: 1px solid var(--rose);
+      border-color: var(--rose);
     }
 
-    .hero-tags{
-      margin-top:14px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
+    textarea { min-height: 120px; resize: vertical; }
 
-    .chip{
-      font-size:.78rem;
-      padding:4px 10px;
-      border-radius:999px;
-      border:1px solid rgba(244,207,122,.6);
-      background:rgba(12,4,8,.9);
-      color:#fbd3e4;
-    }
+    /* FOOTER */
 
-    .hero-actions{
-      margin-top:20px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-    }
-
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 20px;
-      border-radius:999px;
-      border:1px solid transparent;
-      font-size:.95rem;
-      cursor:pointer;
-      white-space:nowrap;
-    }
-
-    .btn-primary{
-      background:linear-gradient(135deg,#f4a6c8,#fbd3e4,#f4cf7a);
-      color:#3b2431;
-      font-weight:600;
-      box-shadow:0 12px 32px rgba(0,0,0,.7);
-    }
-
-    .btn-ghost{
-      border-color:rgba(244,207,122,.8);
-      color:#f4cf7a;
-      background:rgba(10,3,6,.7);
-    }
-
-    /* VISUEL BANDEAU FLAMBOYANT */
-    .hero-visual{
-      border-radius:var(--radius);
-      padding:18px;
-      background:
-        radial-gradient(circle at top,#fdd6ea 0,#f4a6c8 45%,#b34b79 80%);
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-      border:1px solid rgba(244,207,122,.65);
-    }
-
-    .hero-frame{
-      height:230px;
-      border-radius:18px;
-      background:
-        conic-gradient(from 210deg,#fff6fb,#ffe3f3,#f4a6c8,#f4cf7a,#fff6fb);
-      position:relative;
-      overflow:hidden;
-    }
-
-    .hero-glass{
-      position:absolute;
-      inset:14px;
-      border-radius:16px;
-      background:linear-gradient(145deg,rgba(255,255,255,.75),rgba(255,255,255,.15));
-      border:1px solid rgba(255,255,255,.75);
-      mix-blend-mode:screen;
-    }
-
-    .hero-tagline{
-      position:absolute;
-      left:18px;
-      bottom:18px;
-      padding:6px 12px;
-      border-radius:999px;
-      background:rgba(12,3,6,.85);
-      border:1px solid rgba(244,207,122,.85);
-      color:#fbd3e4;
-      font-size:.78rem;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-    }
-
-    .hero-corner{
-      position:absolute;
-      top:16px;
-      right:16px;
-      font-size:.75rem;
-      background:rgba(12,3,6,.8);
-      padding:4px 9px;
-      border-radius:999px;
-      border:1px solid rgba(255,255,255,.4);
-      color:#f4cf7a;
-    }
-
-    /* ---------- SECTIONS GÉNÉRALES ---------- */
-    .section{
-      padding:40px 0;
-    }
-
-    .section-header{
-      margin-bottom:20px;
-    }
-
-    .section-kicker{
-      font-size:.78rem;
-      text-transform:uppercase;
-      letter-spacing:.16em;
-      color:#fbd3e4;
-    }
-
-    .section-title{
-      font-size:1.6rem;
-      color:#ffe3f3;
-    }
-
-    .section-intro{
-      margin-top:8px;
-      color:#d9bcd0;
-      max-width:620px;
-    }
-
-    /* ---------- SERVICES (CARTES OR) ---------- */
-    .services-grid{
-      display:grid;
-      gap:20px;
-    }
-
-    @media(min-width:860px){
-      .services-grid{
-        grid-template-columns:repeat(3,1fr);
-      }
-    }
-
-    .service-card{
-      border-radius:20px;
-      background:
-        radial-gradient(circle at top,#3b2230 0,#1a0d14 60%);
-      border:1px solid rgba(244,207,122,.55);
-      box-shadow:var(--shadow);
-      padding:18px 16px 20px;
-      position:relative;
-      overflow:hidden;
-    }
-
-    .service-card::before{
-      content:"";
-      position:absolute;
-      inset:-40%;
-      background:conic-gradient(from 210deg,
-        rgba(244,207,122,.22),
-        transparent,
-        rgba(244,207,122,.32),
-        transparent);
-      opacity:.4;
-      mix-blend-mode:soft-light;
-    }
-
-    .service-inner{
-      position:relative;
-      z-index:1;
-    }
-
-    .service-label{
-      font-size:.75rem;
-      text-transform:uppercase;
-      letter-spacing:.14em;
-      color:#fbd3e4;
-      margin-bottom:4px;
-    }
-
-    .service-title{
-      font-size:1.03rem;
-      color:#ffe3f3;
-      margin-bottom:6px;
-    }
-
-    .service-text{
-      font-size:.92rem;
-      color:#e6c9db;
-    }
-
-    /* ---------- APPROCHE / CADRE ---------- */
-    .approche-block{
-      border-radius:var(--radius);
-      background:radial-gradient(circle at top,#2c1722,#13070f 65%);
-      border:1px solid rgba(244,207,122,.7);
-      box-shadow:var(--shadow);
-      padding:22px 18px 24px;
-      margin-top:10px;
-    }
-
-    .approche-main{
-      margin-top:8px;
-      color:#e5cadd;
-      font-size:.95rem;
-    }
-
-    .approche-tags{
-      margin-top:12px;
-      display:flex;
-      flex-wrap:wrap;
-      gap:8px;
-    }
-
-    .approche-note{
-      margin-top:14px;
-      font-size:.9rem;
-      color:#f1d5e7;
-    }
-
-    /* ---------- FAQ ---------- */
-    .faq-list{
-      display:grid;
-      gap:12px;
-      margin-top:10px;
-    }
-
-    .faq-item{
-      border-radius:16px;
-      background:radial-gradient(circle at top,#2a1922,#130910);
-      border:1px solid rgba(244,207,122,.45);
-      padding:12px 14px;
-      cursor:pointer;
-    }
-
-    .faq-q{
-      font-size:.94rem;
-      color:#ffe3f3;
-    }
-
-    .faq-a{
-      display:none;
-      margin-top:6px;
-      font-size:.9rem;
-      color:#e8cadf;
-    }
-
-    .faq-item.open .faq-a{
-      display:block;
-    }
-
-    /* ---------- CTA / CONTACT ---------- */
-    .cta{
-      text-align:center;
-      padding:40px 0 10px;
-    }
-
-    .cta p{
-      color:#d9bcd0;
-      margin:6px 0;
-    }
-
-    .cta-mail{
-      margin-top:10px;
-      font-size:.9rem;
-      color:#fbd3e4;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer{
-      border-top:1px solid rgba(244,207,122,.35);
-      padding:14px;
-      text-align:center;
-      font-size:.78rem;
-      color:#c9aecd;
-      margin-top:18px;
+    footer {
+      text-align: center;
+      padding: 24px 16px 30px;
+      font-size: .8rem;
+      color: var(--text-soft);
     }
   </style>
 </head>
 
 <body>
 
-<!-- HERO ROSÉ GOLD FLAMBOYANT -->
-<section class="hero">
-  <div class="hero-inner">
-
-    <div>
-      <div class="hero-badge">Féminisation luxe & guidance</div>
-      <h1 class="hero-title">
-        Féminité <span>Évolutive</span> en rosé&nbsp;gold.
-      </h1>
-      <p class="hero-text">
-        Un univers boudoir pastel, rosé gold et or luxueux pour explorer ta féminité
-        avec une guidance douce, structurée, et une touche de domination assumée mais bienveillante.
-      </p>
-
-      <div class="hero-tags">
-        <span class="chip">Ambiance boudoir luxe</span>
-        <span class="chip">Féminisation évolutive</span>
-        <span class="chip">Direction douce & ferme</span>
-      </div>
-
-      <div class="hero-actions">
-        <a href="#contact" class="btn btn-primary">Demander une réservation</a>
-        <a href="#services" class="btn btn-ghost">Voir les services</a>
-      </div>
-    </div>
-
-    <div class="hero-visual" aria-label="Bannière luxueuse rosé gold">
-      <div class="hero-frame">
-        <div class="hero-glass"></div>
-        <div class="hero-tagline">Féminité • Rosé&nbsp;Gold • Guidance</div>
-        <div class="hero-corner">Édition luxe</div>
-      </div>
-    </div>
-
+<header>
+  <div class="nav-inner">
+    <div class="logo">Chambre Rose Flamboyant</div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#apropos">À propos</a></li>
+        <li><a href="#experiences">Expériences</a></li>
+        <li><a href="#univers">Univers</a></li>
+        <li><a href="#valeurs">Valeurs</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </div>
-</section>
+</header>
 
-<!-- CONTENU PRINCIPAL -->
-<main class="wrapper">
+<main>
 
-  <!-- SERVICES -->
-  <section class="section" id="services">
-    <div class="section-header">
-      <div class="section-kicker">Services</div>
-      <h2 class="section-title">Féminisation flamboyante & encadrée</h2>
-      <p class="section-intro">
-        Des expériences luxueuses, rosé gold et pastel, pensées pour te faire évoluer
-        dans ta féminité, ton image et ta posture, avec une présence qui guide réellement.
-      </p>
+  <!-- ACCUEIL / HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-kicker">Féminité évolutive & féminisation guidée</div>
+    <h1 class="hero-title">Un univers de féminité rose, douce<br>et subtilement dirigée.</h1>
+    <p class="hero-sub">
+      Chambre Rose Flamboyant est un espace dédié à la féminisation, à l’esthétique
+      et à la posture. Un cadre pastel, luxe et structuré pour explorer une féminité
+      assumée, avec une présence qui guide réellement.
+    </p>
+
+    <div class="hero-tags">
+      <span class="tag">Féminisation progressive</span>
+      <span class="tag">Ambiance boudoir pastel</span>
+      <span class="tag">Guidance douce & ferme</span>
     </div>
 
-    <div class="services-grid">
-
-      <article class="service-card">
-        <div class="service-inner">
-          <div class="service-label">Évolution</div>
-          <h3 class="service-title">Féminisation progressive</h3>
-          <p class="service-text">
-            Travail en douceur mais avec structure : posture, voix, gestuelle, attitude,
-            façon d’entrer dans une pièce et de tenir ton rôle féminin.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-inner">
-          <div class="service-label">Ambiance</div>
-          <h3 class="service-title">Boudoir rosé&nbsp;gold</h3>
-          <p class="service-text">
-            Univers pastel, reflets dorés, détails féminins et enveloppants pour t’offrir
-            un cadre chic où ta féminité peut s’affirmer sans jugement.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-inner">
-          <div class="service-label">Direction</div>
-          <h3 class="service-title">Guidance dominatrice douce</h3>
-          <p class="service-text">
-            Présence claire, consignes précises, cadre posé. La domination ici est une structure :
-            elle t’oriente, t’encadre et t’aide à tenir ton rôle.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-inner">
-          <div class="service-label">Image</div>
-          <h3 class="service-title">Style & présentation</h3>
-          <p class="service-text">
-            Conseils de tenue, association de couleurs, détails féminins, attitude et
-            “finitions” pour un rendu visuel plus luxueux et assumé.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-inner">
-          <div class="service-label">Immersion</div>
-          <h3 class="service-title">Sessions combinées</h3>
-          <p class="service-text">
-            Séances plus longues combinant féminisation, boudoir, guidance et travail
-            sur le style, pour une expérience complète et profonde.
-          </p>
-        </div>
-      </article>
-
-      <article class="service-card">
-        <div class="service-inner">
-          <div class="service-label">Après</div>
-          <h3 class="service-title">Suivi & rituels</h3>
-          <p class="service-text">
-            Petits rituels élégants à intégrer à ton quotidien pour garder la connexion
-            avec ta féminité entre deux séances.
-          </p>
-        </div>
-      </article>
-
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Demander une séance</a>
+      <a href="#apropos" class="btn btn-outline">En savoir plus</a>
     </div>
   </section>
 
-  <!-- APPROCHE -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-kicker">Approche</div>
-      <h2 class="section-title">Une féminité guidée, ornementée, mais respectée.</h2>
-      <p class="section-intro">
-        Le style est flamboyant, mais le cœur reste sérieux : consentement, cadre clair,
-        limites établies et respect de ta sensibilité.
-      </p>
-    </div>
+  <!-- À PROPOS -->
+  <section id="apropos">
+    <h2>À propos</h2>
+    <p class="section-intro">
+      Chambre Rose Flamboyant est pensée comme un cocon féminin et structuré :
+      un lieu où l’on peut apprendre, se transformer, se laisser guider dans une
+      esthétique rose pastel avec une touche de rosé-gold.
+    </p>
 
-    <div class="approche-block">
-      <p class="approche-main">
-        Ici, la féminité n’est ni banalisée, ni ridiculisée. Elle est traitée comme un univers
-        à part entière, avec sa douceur, son luxe, ses codes, mais aussi ses exigences.
-        La domination se place dans la direction et la structure : tu n’es jamais laissé(e) sans repères.
-      </p>
+    <p>
+      La démarche est centrée sur la féminisation évolutive&nbsp;: postures, attitudes,
+      rythmes, façon de se présenter, de se mouvoir et d’occuper l’espace.
+      L’objectif n’est pas seulement d’enfiler un rôle, mais d’habiter une
+      féminité qui te ressemble, à ton rythme.
+    </p>
 
-      <div class="approche-tags">
-        <span class="chip">Consentement explicite</span>
-        <span class="chip">Cadre sécuritaire</span>
-        <span class="chip">Présence exigeante</span>
-        <span class="chip">Ambiance rosé&nbsp;gold</span>
-      </div>
-
-      <p class="approche-note">
-        Tu viens comme tu es, avec tes envies, tes hésitations, tes limites.
-        Ensemble, nous faisons évoluer ton expression féminine, séance après séance, dans un décor
-        qui te rappelle que tu as le droit d’être à la fois doux(ce) et flamboyant(e).
-      </p>
-    </div>
+    <p>
+      La direction est présente, ferme mais bienveillante&nbsp;: tu n’es pas laissé(e)
+      seul(e) face à tes hésitations. Les consignes, le cadre et la progression
+      sont adaptés à ton niveau et à tes limites.
+    </p>
   </section>
 
-  <!-- FAQ -->
-  <section class="section">
-    <div class="section-header">
-      <div class="section-kicker">FAQ</div>
-      <h2 class="section-title">Questions fréquentes</h2>
-      <p class="section-intro">Quelques réponses rapides avant un premier contact.</p>
-    </div>
+  <!-- EXPÉRIENCES / SERVICES -->
+  <section id="experiences">
+    <h2>Expériences & accompagnements</h2>
+    <p class="section-intro">
+      Les expériences proposées ne sont pas des forfaits figés, mais des parcours
+      construits à partir d’un échange préalable. Envies, limites et objectifs sont
+      clarifiés avant toute rencontre.
+    </p>
 
-    <div class="faq-list">
-      <div class="faq-item">
-        <div class="faq-q">Je débute complètement, est-ce que c’est pour moi ?</div>
-        <div class="faq-a">
-          Oui. L’approche évolutive est pensée pour les personnes qui commencent à peine,
-          qui n’osent pas encore, ou qui ne savent pas par où démarrer.
-        </div>
-      </div>
+    <p class="subheading">Féminisation individuelle</p>
+    <p>
+      Une séance orientée sur toi&nbsp;: tenue, attitude, voix, gestuelle, regard.
+      L’accent est mis sur la cohérence entre ton apparence et la façon dont tu te
+      sens dans le rôle féminin.
+    </p>
 
-      <div class="faq-item">
-        <div class="faq-q">La domination est-elle très présente ?</div>
-        <div class="faq-a">
-          Elle est présente dans la structure : consignes, cadre, direction. Pas dans l’agression ou l’humiliation.
-          C’est une domination douce, assumée, mais toujours attentive.
-        </div>
-      </div>
+    <p class="subheading">Parcours évolutif</p>
+    <p>
+      Pour celles et ceux qui souhaitent cheminer sur plusieurs séances.
+      Construction progressive de ton rôle, rituels de préparation, codes de conduite
+      et repères pour maintenir la féminité entre chaque rencontre.
+    </p>
 
-      <div class="faq-item">
-        <div class="faq-q">Dois-je avoir une garde-robe complète ?</div>
-        <div class="faq-a">
-          Non. Nous pouvons travailler à partir de ce que tu as déjà, ou poser simplement les bases
-          de ton style futur. Le plus important, c’est ton envie d’explorer.
-        </div>
-      </div>
-    </div>
+    <p class="subheading">Immersion “Chambre Rose”</p>
+    <p>
+      Une immersion plus longue, dans l’univers complet de la Chambre Rose&nbsp;:
+      décor, lumières, accessoires choisis, ambiance plus enveloppante et dirigée,
+      tout en restant dans un cadre sécuritaire et discuté en amont.
+    </p>
   </section>
 
-  <!-- CONTACT / CTA -->
-  <section class="section" id="contact">
-    <div class="cta">
-      <h2 class="section-title">Réserver une séance</h2>
-      <p>Pour une demande ou un premier contact, écris en décrivant ton niveau, tes envies et tes limites.</p>
-      <p class="cta-mail">(Remplace l’adresse ci-dessous par la tienne)</p>
-      <a href="mailto:exemple@courriel.com" class="btn btn-primary">Envoyer une demande par courriel</a>
+  <!-- UNIVERS -->
+  <section id="univers">
+    <h2>Univers visuel & ambiance</h2>
+    <p class="section-intro">
+      L’univers de Chambre Rose Flamboyant s’inspire d’un boudoir moderne&nbsp;:
+      rose pastel, touches rosé-gold, douceur visuelle et détails féminins.
+    </p>
+
+    <p>
+      L’ambiance rappelle une chambre intime pensée pour la transformation&nbsp;:
+      coussins, textiles doux, objets soigneusement choisis, lumière tamisée.
+      Tout est construit pour inviter à l’abandon des défenses et à l’accueil
+      de la féminité.
+    </p>
+
+    <div class="pill-row">
+      <span class="pill">Pastel rose & rosé-gold</span>
+      <span class="pill">Décor intime & structuré</span>
+      <span class="pill">Énergie féminine assumée</span>
+      <span class="pill">Cadre sécurisant</span>
+    </div>
+
+    <p style="margin-top:10px;">
+      L’intensité peut varier&nbsp;: d’un cadre très doux et pédagogique pour les
+      premières explorations, à des mises en scène plus codifiées pour les personnes
+      déjà à l’aise avec ce type d’univers.
+    </p>
+  </section>
+
+  <!-- VALEURS -->
+  <section id="valeurs">
+    <h2>Valeurs & cadre</h2>
+    <p class="section-intro">
+      La féminisation, ici, repose sur une éthique claire. Il ne s’agit pas de se
+      perdre, mais de se découvrir dans un cadre maîtrisé.
+    </p>
+
+    <ul>
+      <li><strong>Consentement explicite</strong> – rien n’est implicite, tout est clarifié avant.</li>
+      <li><strong>Communication honnête</strong> – possibilité de nommer ses limites, ses craintes et ses envies.</li>
+      <li><strong>Respect des identités</strong> – genre, expression, cheminement et expériences de chacun(e).</li>
+      <li><strong>Confidentialité</strong> – ce qui est partagé dans la Chambre reste dans la Chambre.</li>
+      <li><strong>Cadre sécuritaire</strong> – attention portée au physique, à l’émotionnel et au mental.</li>
+    </ul>
+
+    <p>
+      Les détails concrets, pratiques et limites spécifiques ne sont jamais exposés
+      publiquement&nbsp;: ils sont discutés en privé, dans le respect de la confidentialité
+      et des règles des plateformes utilisées.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact & demande de séance</h2>
+    <p class="section-intro">
+      Toute demande commence par un échange écrit. Cela permet de vérifier la
+      compatibilité, de comprendre où tu en es et ce que tu souhaites explorer.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-box">
+        <form>
+          <label for="nom">Nom / Pseudonyme</label>
+          <input id="nom" type="text" placeholder="Ton nom ou alias">
+
+          <label for="email">Adresse e-mail</label>
+          <input id="email" type="email" placeholder="ton.adresse@mail.com">
+
+          <label for="objet">Objet de la demande</label>
+          <input id="objet" type="text" placeholder="Première séance, parcours, question…">
+
+          <label for="message">Message</label>
+          <textarea id="message" placeholder="Présente-toi, ton niveau d’expérience, tes envies et tes limites."></textarea>
+
+          <button type="submit" class="btn btn-primary" style="margin-top:4px;">(Formulaire décoratif)</button>
+        </form>
+      </div>
+
+      <div class="contact-box">
+        <p>
+          Le formulaire ci-contre est volontairement symbolique&nbsp;: il ne renvoie
+          pas encore de message. Tu peux me contacter directement à l’adresse de ton
+          choix (courriel, messagerie chiffrée, etc.).
+        </p>
+        <p class="subheading">Prochaine étape</p>
+        <p>
+          Remplace ce texte par :
+        </p>
+        <ul>
+          <li>Une adresse e-mail dédiée</li>
+          <li>Un lien vers un formulaire externe</li>
+          <li>Un système de prise de rendez-vous</li>
+        </ul>
+      </div>
     </div>
   </section>
 
 </main>
 
 <footer>
-  Féminité Évolutive — <span id="year"></span> • Univers rosé&nbsp;gold & flamboyant
+  © <span id="year"></span> Chambre Rose Flamboyant – Féminité évolutive & univers pastel.
 </footer>
 
 <script>
   // Année auto
   document.getElementById("year").textContent = new Date().getFullYear();
-
-  // FAQ toggle
-  document.querySelectorAll(".faq-item").forEach(function(item){
-    item.addEventListener("click", function(){
-      item.classList.toggle("open");
-    });
-  });
 </script>
 
 </body>
