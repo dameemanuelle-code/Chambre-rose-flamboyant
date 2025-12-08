@@ -35,7 +35,28 @@ body {
 }
 
 /* ---------- HEADER & NAV ---------- */
+.monogram-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
 
+.monogram-de {
+  max-width: 180px;      /* taille du monogramme */
+  width: 40vw;
+  height: auto;
+  display: block;
+  border-radius: 50%;    /* garde l'effet médaillon si le fond est circulaire */
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* Un peu plus grand sur écran d’ordi */
+@media (min-width: 768px) {
+  .monogram-de {
+    max-width: 220px;
+  }
+}
 .top-header {
   position: sticky;
   top: 0;
