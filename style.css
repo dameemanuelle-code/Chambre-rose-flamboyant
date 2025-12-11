@@ -377,3 +377,14 @@ textarea:focus {
     padding: 2rem 1.5rem;
   }
 }
+.partners-box a {
+  color: #c59ac4; /* rose-or pâle élégant, assorti à ta palette */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.partners-box a:hover {
+  color: #e7c9e4; /* plus clair au survol */
+  text-shadow: 0 0 6px rgba(255, 200, 240, 0.6);
+}
+
