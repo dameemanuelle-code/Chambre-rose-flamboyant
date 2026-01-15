@@ -413,4 +413,27 @@ textarea:focus {
   color: #e7c9e4; /* plus clair au survol */
   text-shadow: 0 0 6px rgba(255, 200, 240, 0.6);
 }
+.clips-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
 
+.clip-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  color: #e8c3d6;
+  font-size: 0.85rem;
+  text-decoration: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.25s ease;
+}
+
+.clip-link:hover {
+  background: rgba(255,255,255,0.15);
+  color: #fff;
+  transform: translateY(-1px);
+}
