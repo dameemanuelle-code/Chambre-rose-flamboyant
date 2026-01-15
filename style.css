@@ -310,6 +310,32 @@ body {
   box-shadow: 0 16px 34px rgba(0, 0, 0, 0.6);
 }
 
+/* =========================
+   CLIPS
+   ========================= */
+.clips{
+  margin-top: 18px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+@media (max-width: 900px){
+  .clips{ grid-template-columns: 1fr; }
+}
+
+.clip{
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+  background: rgba(10,14,28,.35);
+  padding: 18px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.22);
+}
+
+.clip h3{ margin: 0 0 10px 0; }
+.clip p{ margin: 0; color: rgba(230,235,255,.70); line-height: 1.7; }
+
+
 /* ---------- FORMULAIRE CONTACT ---------- */
 
 .contact-form {
