@@ -437,67 +437,77 @@ textarea:focus {
   color: #fff;
   transform: translateY(-1px);
 }
-/* ===== Spécialités ===== */
-
-/* ===== Harmonisation Spécialités ===== */
-.section.specialites{
-  padding-top: 64px;
-  padding-bottom: 64px;
+/* ===== SPÉCIALITÉS (spx) — version clean & harmonisée ===== */
+.spx{
+  padding: 70px 0;
 }
 
-/* Titre aligné et cohérent */
-.section.specialites .section-title{
-  text-align: left;            /* comme tes autres sections */
-  margin-bottom: 10px;
-}
-
-/* Texte intro : même vibe que le reste, mais plus clean */
-.section.specialites .section-lead{
-  text-align: left;
-  margin: 0 0 22px 0;
-  max-width: 900px;
-  opacity: .92;
-}
-
-/* Grille : plus “pro” et équilibrée */
-.section.specialites .spec-grid{
-  margin-top: 18px;
-  gap: 16px;
-}
-
-/* Cartes : plus proches du style “Protocole & Cadre” */
-.section.specialites .spec-card{
+.spx .spx-panel{
+  border-radius: 22px;
+  padding: 32px 26px;
   background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 14px 30px rgba(0,0,0,.28);
+  border: 1px solid rgba(255,255,255,.14);
+  box-shadow: 0 18px 44px rgba(0,0,0,.40);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.spx .spx-title{
+  margin: 0 0 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+
+.spx .spx-lead{
+  margin: 0 0 22px;
+  max-width: 980px;
+  opacity: .92;
+  line-height: 1.7;
+}
+
+.spx .spx-grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.spx .spx-card{
+  border-radius: 18px;
+  padding: 18px 18px 16px;
+  background: rgba(0,0,0,.18);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 14px 34px rgba(0,0,0,.35);
   position: relative;
 }
 
-/* Petit liseré subtil en haut (effet luxe) */
-.section.specialites .spec-card::before{
-  content: "";
-  position: absolute;
+.spx .spx-card::before{
+  content:"";
+  position:absolute;
   left: 14px;
   right: 14px;
   top: 12px;
   height: 1px;
-  background: rgba(255,225,200,.18);
+  background: rgba(255,220,190,.16);
   border-radius: 2px;
 }
 
-/* Titres cartes */
-.section.specialites .spec-card h3{
-  margin-top: 6px;
-  font-size: 1.02rem;
+.spx .spx-card h3{
+  margin: 6px 0 8px;
   letter-spacing: .03em;
+  font-size: 1.02rem;
 }
 
-/* Texte cartes */
-.section.specialites .spec-card p{
+.spx .spx-card p{
+  margin: 0;
   opacity: .88;
+  line-height: 1.55;
 }
 
-/* Si jamais il reste un CTA, on le neutralise */
-.section.specialites .spec-cta{
-  display: none;
+/* Responsive */
+@media (max-width: 980px){
+  .spx .spx-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 620px){
+  .spx .spx-grid{ grid-template-columns: 1fr; }
 }
